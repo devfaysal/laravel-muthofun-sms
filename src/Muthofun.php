@@ -16,6 +16,11 @@ class Muthofun
 
     public function send($numbers, $message)
     {
+
+        if(is_array($numbers)){
+            $numbers = implode(',',$numbers);
+        }
+
         $username = $this->config['username'];
 	    $password = $this->config['password'];
 

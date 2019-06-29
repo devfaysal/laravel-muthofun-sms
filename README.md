@@ -1,6 +1,6 @@
 # Laravel Muthofun SMS
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/devfaysal/laravel-muthofun-sms.svg?style=flat-square)](https://packagist.org/packages/devfaysal/laravel-muthofun-sms)
-[![Total Downloads](https://img.shields.io/packagist/dt/devfaysal/laravel-muthofun-sms.svg?style=flat-square)](https://packagist.org/packages/devfaysal/laravel-muthofun-sms)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/devfaysal/laravel-muthofun-sms.svg)](https://packagist.org/packages/devfaysal/laravel-muthofun-sms)
+[![Total Downloads](https://img.shields.io/packagist/dt/devfaysal/laravel-muthofun-sms.svg)](https://packagist.org/packages/devfaysal/laravel-muthofun-sms)
 
 Simple Laravel wrapper for MuthoFun SMS Gateway API
 

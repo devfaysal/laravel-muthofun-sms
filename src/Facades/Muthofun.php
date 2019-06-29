@@ -1,11 +1,11 @@
 <?php
 
-namespace Devfaysal\Muthofun;
+namespace Devfaysal\Muthofun\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 
-class MuthofunFacade extends Facade
+class Muthofun extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -14,6 +14,6 @@ class MuthofunFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Muthofun';
+        return 'muthofun';
     }
 }

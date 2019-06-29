@@ -48,7 +48,7 @@
                 "Devfaysal\\Muthofun\\MuthofunServiceProvider"
             ],
             "aliases": {
-                "Muthofun": "Devfaysal\\Muthofun\\MuthofunFacade"
+                "Muthofun": "Devfaysal\\Muthofun\\Facades\\Muthofun"
             }
         }
     }

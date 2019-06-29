@@ -3,6 +3,7 @@
 
 namespace Devfaysal\Muthofun;
 
+use Devfaysal\Muthofun\Muthofun;
 use Illuminate\Support\ServiceProvider;
 
 class MuthofunServiceProvider extends ServiceProvider
@@ -30,7 +31,7 @@ class MuthofunServiceProvider extends ServiceProvider
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'muthofun');
         // Register the main class to use with the facade
-        $this->app->singleton('muthofun', function () {
+        $this->app->bind('muthofun', function () {
             return new Muthofun;
         });
     }

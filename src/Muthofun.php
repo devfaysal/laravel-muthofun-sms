@@ -10,6 +10,9 @@ class Muthofun
 
     public function __construct()
     {
+        if(config('muthofun.username') == null || config('muthofun.password') == null){
+            throw new \Exception('Muthofun credentials are not set in environment');
+        }
         $this->config = config('muthofun');
     }
 

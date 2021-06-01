@@ -30,7 +30,8 @@ class Muthofun
 		// make sure passed string is url encoded
         $message = rawurlencode($message);
 		
-		$url = "http://clients.muthofun.com:8901/esmsgw/sendsms.jsp?user=$username&password=$password&mobiles=$numbers&sms=$message&unicode=1";			
+		//$url = "http://clients.muthofun.com:8901/esmsgw/sendsms.jsp?user=$username&password=$password&mobiles=$numbers&sms=$message&unicode=1";
+	    	$url = "http://developer.muthofun.com/sms.php?user=$username&password=$password&mobiles=$numbers&sms=$message&unicode=1";
 
 		$c = curl_init(); 
 		curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); 

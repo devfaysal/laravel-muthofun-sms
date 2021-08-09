@@ -2,6 +2,7 @@
 
 namespace Devfaysal\Muthofun;
 
+use Illuminate\Support\Facades\Http;
 
 class Muthofun
 {
@@ -30,15 +31,10 @@ class Muthofun
 		// make sure passed string is url encoded
         $message = rawurlencode($message);
 		
-		//$url = "http://clients.muthofun.com:8901/esmsgw/sendsms.jsp?user=$username&password=$password&mobiles=$numbers&sms=$message&unicode=1";
-	    	$url = "http://developer.muthofun.com/sms.php?user=$username&password=$password&mobiles=$numbers&sms=$message&unicode=1";
-
-		$c = curl_init(); 
-		curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); 
-		curl_setopt($c, CURLOPT_URL, $url); 
-        $response = curl_exec($c); 
+        $url = "http://developer.muthofun.com/sms.php?username=$username&password=$password&mobiles=$numbers&sms=$message&unicode=1";
+        $response = Http::get($url);
         
-        return $response;
+        return $response->body();
     }
 
 }

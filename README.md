@@ -25,7 +25,7 @@ use Devfaysal\Muthofun\Facades\Muthofun;
 Send SMS to Single user
 
 ```php 
-Muthofun::send('Phone number' , 'Your Message!!');
+Muthofun::send('01717012345' , 'Your Message!!');
 ```
 
 Send SMS to Multiple user

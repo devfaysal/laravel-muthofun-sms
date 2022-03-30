@@ -44,11 +44,14 @@ class Muthofun
         return $response->json()['data'];
     }
 
-    public function accountBalance()
+    public function accountBalance($details = false)
     {
         $url = $this->baseUrl . '/get-balance';
 
         $response = Http::withHeaders($this->headers)->get($url);
-        return $response->json();
+        if($details){
+            return $response->json();
+        }
+        return $response->json()['balance'];
     }
 }

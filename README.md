@@ -21,6 +21,12 @@ Copy the api key from https://clients.muthobarta.com/developers/api and add to t
 Example:
 ```MUTHOFUN_API_KEY=1f2d5f6e9e9e8r5d5s5s6f9f```
 
+## Upgrade Guide
+If you were using the old API, follow the steps to upgrade
+- If you publised the config file, republish the config file   ```php artisan vendor:publish --provider="Devfaysal\Muthofun\MuthofunServiceProvider" --force ```
+- Remove old username and password from config or .env file
+- add new api key to the .env file
+
 ## Use
 
 Send SMS to Single recipient

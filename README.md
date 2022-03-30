@@ -22,19 +22,20 @@ Example:
 ```MUTHOFUN_API_KEY=1f2d5f6e9e9e8r5d5s5s6f9f```
 
 ## Use
+
+Send SMS to Single recipient
+
 ```php 
 use Devfaysal\Muthofun\Facades\Muthofun; 
-```
 
-Send SMS to Single user
-
-```php 
 Muthofun::send('01717012345' , 'Your Message!!');
 ```
 
-Send SMS to Multiple user
+Send SMS to Multiple recipients
 
 ```php
+use Devfaysal\Muthofun\Facades\Muthofun; 
+
 $users = [
   '01717012345', 
   '01671012345', 

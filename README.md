@@ -10,12 +10,16 @@ Simple Laravel wrapper for MuthoFun SMS Gateway API
 composer require devfaysal/laravel-muthofun-sms
 ```
 
-Publish Config File to set username and password
+Optionally Publish Config File
 
 ```php 
 php artisan vendor:publish --provider="Devfaysal\Muthofun\MuthofunServiceProvider" 
 ```
+## Set API key
 
+Copy the api key from https://clients.muthobarta.com/developers/api and add to the .env file.  
+Example:
+```MUTHOFUN_API_KEY=1f2d5f6e9e9e8r5d5s5s6f9f```
 
 ## Use
 ```php 
@@ -40,3 +44,15 @@ $users = [
 Muthofun::send($users , 'Your Message!!');
 
 ```
+
+TODO:  
+- [ ] Sending Personalized SMS (Send different message for different recipient.)
+
+### Security
+
+If you discover any security related issues, please email devfaysal@gmail.com instead of using the issue tracker.
+
+## Credits
+
+- [Faysal Ahamed](https://github.com/devfaysal)
+- [All Contributors](../../contributors)

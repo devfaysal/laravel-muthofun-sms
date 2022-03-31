@@ -19,7 +19,7 @@ php artisan vendor:publish --provider="Devfaysal\Muthofun\MuthofunServiceProvide
 
 Copy the api key from https://clients.muthobarta.com/developers/api and add to the .env file.  
 Example:
-```MUTHOFUN_API_KEY=1f2d5f6e9e9e8r5d5s5s6f9f```
+```MUTHOFUN_API_KEY="Token 1f2d5f6e9e9e8r5d5s5s6f9f"```
 
 ## Upgrade Guide
 If you were using the old API, follow the steps to upgrade

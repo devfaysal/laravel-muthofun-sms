@@ -15,7 +15,7 @@ class Muthofun
         if (config('muthofun.apiKey') == null) {
             throw new \Exception('Muthofun api key is not set');
         }
-        $this->headers['Authorization'] = 'Token ' . config('muthofun.apiKey');
+        $this->headers['Authorization'] = config('muthofun.apiKey');
     }
 
     public function send($numbers, $message)

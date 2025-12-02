@@ -2,6 +2,7 @@
 
 namespace Devfaysal\Muthofun;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 
 class Muthofun
@@ -39,6 +40,19 @@ class Muthofun
     public function deliveryReport()
     {
         $url = $this->baseUrl . '/delivery-report';
+
+        $response = Http::withHeaders($this->headers)->get($url);
+        return $response->json()['data'];
+    }
+
+    public function deliveryReportToday()
+    {
+        return $this->deliveryReportByDate(Carbon::now(), Carbon::now());
+    }
+
+    public function deliveryReportByDate(Carbon $from, Carbon $to)
+    {
+        $url = $this->baseUrl . '/delivery-report?from_date=' . $from->format('Y-m-d') . '&to_date=' . $to->format('Y-m-d');
 
         $response = Http::withHeaders($this->headers)->get($url);
         return $response->json()['data'];
